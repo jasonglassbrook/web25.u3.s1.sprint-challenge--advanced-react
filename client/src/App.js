@@ -1,6 +1,9 @@
 /// external modules ///
 import React from 'react';
 
+/// hooks ///
+import useRemoteData from 'hooks/remote';
+
 /// styles ///
 import './styles/App.css';
 
