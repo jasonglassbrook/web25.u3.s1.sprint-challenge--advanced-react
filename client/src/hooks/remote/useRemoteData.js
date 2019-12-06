@@ -26,7 +26,7 @@ const init = {
 /***************************************
   HOOK
 ***************************************/
-export const useRemoteData = (
+const useRemoteData = (
   address,
   {
     handleResponse = init.handleResponse,
@@ -51,4 +51,7 @@ export const useRemoteData = (
 };
 
 /**************************************/
-export default useSessionStorageState;
+export default useRemoteData;
+export {
+  useRemoteData,
+};
