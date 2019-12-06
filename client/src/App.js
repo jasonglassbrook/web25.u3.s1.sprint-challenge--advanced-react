@@ -2,7 +2,7 @@
 import React from 'react';
 
 /// hooks ///
-import useRemoteData from 'hooks/remote';
+import { useRemoteData } from 'hooks/remote';
 
 /// styles ///
 import './styles/App.css';
@@ -18,7 +18,9 @@ class App extends React.Component {
     /* DEV */ console.log (`>>> App : constructing... <<<`);
     super (props);
     this.state = {
+      api : 'http://localhost:5000/api/players',
     };
+    [this.state.data, this.state.getData] = useRemoteData (this.state.api, {fallbackData : []});
   };
 
   componentDidMount () {
