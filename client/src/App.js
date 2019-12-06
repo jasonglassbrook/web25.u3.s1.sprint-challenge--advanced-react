@@ -2,7 +2,7 @@
 import React from 'react';
 
 /// hooks ///
-import { useRemoteData } from 'hooks/remote';
+import { useRemoteGet } from 'hooks/remote';
 
 /// styles ///
 import './styles/App.css';
@@ -24,7 +24,7 @@ class App extends React.Component {
   constructor (props) {
     /* DEV */ console.log (`>>> App : constructing... <<<`);
     super (props);
-    [this.state.data, this.state.getData] = useRemoteData (init.api, {fallbackData : []});
+    [this.state.data, this.state.getData] = useRemoteGet (init.api, {fallbackData : []});
   };
 
   componentDidMount () {
