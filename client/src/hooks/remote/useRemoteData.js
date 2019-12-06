@@ -36,11 +36,18 @@ export const useRemoteData = (
 ) => {
   const [data, setData] = React.useState (initData);
 
-  const fetchData = (value) => {
-    
+  const getData = () => {
+    axios
+      .get (address)
+      .then ((response) => {
+        handleResponse (response, setData, initData);
+      })
+      .catch ((error) => {
+        handleError (error, setData, data); // doesn't overwrite data
+      });
   };
 
-  return [data, fetchData];
+  return [data, getData];
 };
 
 /**************************************/
