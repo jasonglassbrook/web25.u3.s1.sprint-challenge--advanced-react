@@ -1,21 +1,32 @@
-/***************************************
+/*******************************************************************************
   parseAxiosError
-----------------------------------------
+--------------------------------------------------------------------------------
   Exhaustively deals with axios's errors.
-***************************************/
+*******************************************************************************/
 
+/*//////////////////////////////////////
+  imports
+//////////////////////////////////////*/
+/// tools ///
+import $tree from 'tools/$tree';
+import { flag as _flag } from 'tools/hi';
 import { is } from 'tools/iffy';
-import _flag from 'tools/flag';
 
-/**************************************/
+/// internal modules ///
+import $pack from './$';
 
+/*//////////////////////////////////////
+  meta
+//////////////////////////////////////*/
+const $this = $tree.branch ('parseAxiosError', $pack);
 const flag = (method, message) => {
-  _flag (method, `parseAxiosError : ${message}`);
+  _flag (method, `${$this.$fullname} : ${message}`);
 };
 
-/**************************************/
-
-const parseAxiosError = (axiosError) => {
+/***************************************
+  MAIN
+***************************************/
+export const parseAxiosError = (axiosError) => {
   let message = {};
 
   if (is (axiosError)) {
@@ -59,9 +70,7 @@ const parseAxiosError = (axiosError) => {
   return (message);
 }
 
-/**************************************/
-
+/*//////////////////////////////////////
+  exports
+//////////////////////////////////////*/
 export default parseAxiosError;
-export {
-  parseAxiosError,
-};
