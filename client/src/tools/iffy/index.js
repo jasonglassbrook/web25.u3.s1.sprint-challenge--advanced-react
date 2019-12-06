@@ -4,6 +4,10 @@
   A set of helper functions for very basic existence/type/form checks.
 *******************************************************************************/
 
+/***************************************
+  MAIN
+***************************************/
+
 /// existence ///
 export const is    = (x) => (x !== undefined && x !== null);
 export const isnt  = (x) => (!is (x)); /* (x === undefined || x === null); */
@@ -14,7 +18,9 @@ export const yes     = (x) => (x === true);
 export const no      = (x) => (x === false);
 export const boolean = (x) => (yes (x) || no (x));
 
-/// exports ///
+/*//////////////////////////////////////
+  exports
+//////////////////////////////////////*/
 export default ({
   is, isnt, maybe,
   yes, no, boolean,
