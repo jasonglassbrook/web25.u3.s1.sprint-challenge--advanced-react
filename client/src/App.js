@@ -8,6 +8,13 @@ import { useRemoteData } from 'hooks/remote';
 import './styles/App.css';
 
 /***************************************
+  INIT
+***************************************/
+const init = {
+  api : 'http://localhost:5000/api/players',
+};
+
+/***************************************
   COMPONENT
 ***************************************/
 class App extends React.Component {
@@ -17,10 +24,7 @@ class App extends React.Component {
   constructor (props) {
     /* DEV */ console.log (`>>> App : constructing... <<<`);
     super (props);
-    this.state = {
-      api : 'http://localhost:5000/api/players',
-    };
-    [this.state.data, this.state.getData] = useRemoteData (this.state.api, {fallbackData : []});
+    [this.state.data, this.state.getData] = useRemoteData (init.api, {fallbackData : []});
   };
 
   componentDidMount () {
