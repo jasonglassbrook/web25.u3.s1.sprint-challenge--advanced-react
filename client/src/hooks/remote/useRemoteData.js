@@ -6,7 +6,7 @@ import axios from 'axios';
 // import _flag from 'tools/flag';
 import handleAxiosResponse from './handleAxiosResponse';
 import handleAxiosError from './handleAxiosError';
-// import iffy from 'tools/iffy';
+import { is } from 'tools/iffy';
 
 /**************************************/
 
@@ -18,32 +18,34 @@ import handleAxiosError from './handleAxiosError';
   STATES
 ***************************************/
 const init = {
-  'data' : {},
-  'handleResponse' : handleAxiosResponse,
-  'handleError' : handleAxiosError,
-}
+  'options' : {
+    'fallbackData' : {},
+    'handleResponse' : handleAxiosResponse,
+    'handleError' : handleAxiosError,
+  },
+};
 
 /***************************************
   HOOK
 ***************************************/
-const useRemoteData = (
-  address,
-  {
-    handleResponse = init.handleResponse,
-    handleError = init.handleError,
-    initData = init.data
+const useRemoteData = (address, options) => {
+  // apply default options
+  if (is (options)) {
+    options = {...init.options, ...options};
+  } else {
+    options = init.options;
   }
-) => {
-  const [data, setData] = React.useState (initData);
+
+  const [data, setData] = React.useState (options.fallbackData);
 
   const getData = () => {
     axios
       .get (address)
       .then ((response) => {
-        handleResponse (response, setData, initData);
+        options.handleResponse (response, setData, options.fallbackData);
       })
       .catch ((error) => {
-        handleError (error, setData, data); // doesn't overwrite data
+        options.handleError (error, setData, data); // doesn't overwrite data
       });
   };
 
