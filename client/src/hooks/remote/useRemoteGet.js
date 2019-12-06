@@ -1,21 +1,36 @@
+/*******************************************************************************
+  useRemoteGet
+*******************************************************************************/
+
+/*//////////////////////////////////////
+  imports
+//////////////////////////////////////*/
 /// external modules ///
 import React from 'react';
 import axios from 'axios';
 
-/// internal modules ///
-// import _flag from 'tools/flag';
-import handleAxiosResponse from './handleAxiosResponse';
-import handleAxiosError from './handleAxiosError';
+/// tools ///
+import $tree from 'tools/$tree';
+import { flag as _flag } from 'tools/hi';
 import { is } from 'tools/iffy';
+import {
+  handleAxiosResponse,
+  handleAxiosError,
+} from 'tools/klaxios';
 
-/**************************************/
+/// internal modules ///
+import $pack from './$';
 
-// const flag = (method, message) => {
-//   _flag (method, `useRemoteData : ${message}`);
-// };
+/*//////////////////////////////////////
+  meta
+//////////////////////////////////////*/
+const $this = $tree.branch ('useRemoteGet', $pack);
+const flag = (method, message) => {
+  _flag (method, `${$this.$fullname} : ${message}`);
+};
 
 /***************************************
-  STATES
+  INIT
 ***************************************/
 const init = {
   'options' : {
@@ -26,9 +41,9 @@ const init = {
 };
 
 /***************************************
-  HOOK
+  MAIN
 ***************************************/
-const useRemoteData = (address, options) => {
+export const useRemoteGet = (address, options) => {
   // apply default options
   if (is (options)) {
     options = {...init.options, ...options};
@@ -52,8 +67,7 @@ const useRemoteData = (address, options) => {
   return [data, getData];
 };
 
-/**************************************/
-export default useRemoteData;
-export {
-  useRemoteData,
-};
+/*//////////////////////////////////////
+  exports
+//////////////////////////////////////*/
+export default useRemoteGet;

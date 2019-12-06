@@ -1,25 +1,19 @@
 /*******************************************************************************
-  HOOKS/REMOTE
+  hooks/remote
+--------------------------------------------------------------------------------
+  React hooks for HTTP requests.
 *******************************************************************************/
 
-/// imports ///
-import useRemoteData from './useRemoteData';
-import handleAxiosResponse from './handleAxiosResponse';
-import handleAxiosError from './handleAxiosError';
-import parseAxiosResponse from './parseAxiosResponse';
-import parseAxiosError from './parseAxiosError';
+/*//////////////////////////////////////
+  imports
+//////////////////////////////////////*/
+import useGet from './useRemoteGet';
 
-/// exports ///
+/*//////////////////////////////////////
+  exports
+//////////////////////////////////////*/
 export default {
-  useRemoteData,
-  handleAxiosResponse,
-  handleAxiosError,
-  parseAxiosResponse,
-  parseAxiosError,
+  useGet,
 };
 
-export * from './useRemoteData';
-export * from './handleAxiosResponse';
-export * from './handleAxiosError';
-export * from './parseAxiosResponse';
-export * from './parseAxiosError';
+export * from './useRemoteGet';
