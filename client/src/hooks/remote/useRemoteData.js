@@ -3,16 +3,16 @@ import React from 'react';
 import axios from 'axios';
 
 /// internal modules ///
-import _flag from 'tools/flag';
+// import _flag from 'tools/flag';
 import handleAxiosResponse from './handleAxiosResponse';
 import handleAxiosError from './handleAxiosError';
 // import iffy from 'tools/iffy';
 
 /**************************************/
 
-const flag = (method, message) => {
-  _flag (method, `useRemoteData : ${message}`);
-};
+// const flag = (method, message) => {
+//   _flag (method, `useRemoteData : ${message}`);
+// };
 
 /***************************************
   STATES
