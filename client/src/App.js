@@ -1,8 +1,8 @@
 /// external modules ///
 import React from 'react';
 
-/// hooks ///
-import { useRemoteGet } from 'hooks/remote';
+/// tools ///
+import klaxios from 'tools/klaxios';
 
 /// styles ///
 import './styles/App.css';
@@ -12,6 +12,7 @@ import './styles/App.css';
 ***************************************/
 const init = {
   api : 'http://localhost:5000/api/players',
+  data : [],
 };
 
 /***************************************
@@ -24,11 +25,17 @@ class App extends React.Component {
   constructor (props) {
     /* DEV */ console.log (`>>> App : constructing... <<<`);
     super (props);
-    [this.state.data, this.state.getData] = useRemoteGet (init.api, {fallbackData : []});
+    this.state = {
+      'data' : init.data,
+    };
   };
 
   componentDidMount () {
     /* DEV */ console.log (`>>> App : did mount... <<<`);
+    klaxios.get (
+      init.api,
+      (newData) => { this.setState ({ data : newData }); }
+    )
   };
 
   componentDidUpdate () {
