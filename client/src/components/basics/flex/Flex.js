@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components';
 /***************************************
   COMPONENT
 ***************************************/
-const Flex = (X) => styled (X) `
+const Flex = (X = 'div') => styled (X) `
   display: flex;
 
   /* flex-direction */
