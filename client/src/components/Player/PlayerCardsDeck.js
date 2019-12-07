@@ -29,3 +29,4 @@ const PlayerCardsDeck = ({ players, ...props }) => {
 
 /**************************************/
 export default PlayerCardsDeck;
+export { PlayerCardsDeck };

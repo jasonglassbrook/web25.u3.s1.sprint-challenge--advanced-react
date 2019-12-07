@@ -26,3 +26,4 @@ const PlayerCard = ({ player, ...props }) => (
 
 /**************************************/
 export default PlayerCard;
+export { PlayerCard };
