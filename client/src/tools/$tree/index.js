@@ -6,7 +6,7 @@
   branch
 --------------------------------------*/
 export const branch = ($name, $pack) => {
-  const $pathname = ($pack) ? ($pack.$pathname + '/') : ('');
+  const $pathname = ($pack) ? ($pack.$fullname + '/') : ('');
   const $fullname = $pathname + $name;
 
   return ({ $name, $pathname, $fullname });
