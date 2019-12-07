@@ -4,7 +4,7 @@ import styled from 'styled-components';
 /***************************************
   COMPONENT
 ***************************************/
-const FlexRow = styled.div `
+const FlexRow = (X = 'div') => styled (X) `
   display: flex;
   flex-flow: row nowrap;
   align-content: stretch;
