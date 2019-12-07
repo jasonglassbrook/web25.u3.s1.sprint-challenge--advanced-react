@@ -22,11 +22,11 @@ export default {
   klaxios,
 };
 
-export * from './$tree';
+// export * from './$tree';
 export {default as $tree} from './$tree';
-export * from './hi';
+// export * from './hi';
 export {default as hi} from './hi';
-export * from './iffy';
+// export * from './iffy';
 export {default as iffy} from './iffy';
-export * from './klaxios';
+// export * from './klaxios';
 export {default as klaxios} from './klaxios';
