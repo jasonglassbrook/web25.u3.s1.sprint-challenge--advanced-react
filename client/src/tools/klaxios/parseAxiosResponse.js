@@ -36,7 +36,7 @@ export const parseAxiosResponse = (axiosResponse) => {
     console.log ('- headers:', axiosResponse.headers);
     console.log ('- config:', axiosResponse.config);
 
-    message = axiosResponse.response.data;
+    message = axiosResponse.data;
   }
   else {
     // There was no error to parse.
