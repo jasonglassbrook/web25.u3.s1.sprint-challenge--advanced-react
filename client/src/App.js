@@ -5,9 +5,9 @@ import React from 'react';
 import klaxios from 'tools/klaxios';
 
 /// components ///
-import { BrowserRouter as Router, Route } from 'react-router';
-import AppAsClass from 'App-as-class';
-import AppAsFun from 'App-as-fun';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import AppAsClass from 'AppAsClass';
+import AppAsFun from 'AppAsFun';
 
 /// styles ///
 import './styles/App.css';
