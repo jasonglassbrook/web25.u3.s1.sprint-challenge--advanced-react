@@ -9,22 +9,22 @@
 import axios from 'axios';
 
 /// tools ///
-import $tree from 'tools/$tree';
-import { flag as _flag } from 'tools/hi';
+// import $tree from 'tools/$tree';
+// import { flag as _flag } from 'tools/hi';
 import { is } from 'tools/iffy';
 
 /// internal modules ///
-import $pack from './$';
+// import $pack from './$';
 import handleAxiosResponse from './handleAxiosResponse';
 import handleAxiosError from './handleAxiosError';
 
 /*//////////////////////////////////////
   meta
 //////////////////////////////////////*/
-const $this = $tree.branch ('get', $pack);
-const flag = (method, message) => {
-  _flag (method, `${$this.$fullname} : ${message}`);
-};
+// const $this = $tree.branch ('get', $pack);
+// const flag = (method, message) => {
+//   _flag (method, `${$this.$fullname} : ${message}`);
+// };
 
 /***************************************
   INIT
