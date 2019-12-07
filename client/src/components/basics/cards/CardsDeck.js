@@ -13,7 +13,7 @@ import './styles.css';
 ***************************************/
 const Container = Flex (styled.ol ``);
 
-const CardsDeck = ({ row, col, wrap, keys, children, ...rest }) => {
+const CardsDeck = ({ row, col, wrap, flex, keys, children, ...rest }) => {
   return (
     <Container
     className={`cards-deck ${rest.className || ''}`.trim ()}
@@ -22,6 +22,7 @@ const CardsDeck = ({ row, col, wrap, keys, children, ...rest }) => {
       wrap : wrap,
       lines : 'stretch',
       items : { across : 'stretch', along : 'start' },
+      ...flex
     }}
     >
       {React.Children.map (children, (item, i) => (
