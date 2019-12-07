@@ -1,9 +1,6 @@
 /// external modules ///
 import React from 'react';
 
-/// tools ///
-import klaxios from 'tools/klaxios';
-
 /// components ///
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import AppAsClass from 'AppAsClass';
