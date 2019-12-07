@@ -13,11 +13,11 @@ export const branch = ($name, $pack) => {
 };
 
 /*--------------------------------------
-  top
+  root
 --------------------------------------*/
-export const top = ($name) => (branch ($name));
+export const root = ($name) => (branch ($name));
 
 /*//////////////////////////////////////
   exports
 //////////////////////////////////////*/
-export default ({ branch, top });
+export default ({ branch, root });

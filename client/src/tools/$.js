@@ -1,5 +1,5 @@
 import $tree from 'tools/$tree';
 
-const $this = $tree.top ('tools');
+const $this = $tree.root ('tools');
 
 export default $this;
