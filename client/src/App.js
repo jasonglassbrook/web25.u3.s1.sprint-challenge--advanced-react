@@ -4,6 +4,9 @@ import React from 'react';
 /// tools ///
 import klaxios from 'tools/klaxios';
 
+/// components ///
+import PlayerCardsDeck from 'components/Player/PlayerCardsDeck';
+
 /// styles ///
 import './styles/App.css';
 
@@ -49,7 +52,9 @@ class App extends React.Component {
   render () {
     /* DEV */ console.log (`>>> App : rendering... <<<`);
     return (
-      <div className='App'>App</div>
+      <div className='App'>
+        <PlayerCardsDeck players={this.state.data}/>
+      </div>
     );
   };
 
