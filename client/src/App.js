@@ -5,7 +5,9 @@ import React from 'react';
 import klaxios from 'tools/klaxios';
 
 /// components ///
-import PlayerCardsDeck from 'components/Player/PlayerCardsDeck';
+import { BrowserRouter as Router, Route } from 'react-router';
+import AppAsClass from 'App-as-class';
+import AppAsFun from 'App-as-fun';
 
 /// styles ///
 import './styles/App.css';
@@ -15,56 +17,25 @@ import './styles/App.css';
 ***************************************/
 const init = {
   api : 'http://localhost:5000/api/players',
-  data : [],
 };
 
-/***************************************
-  COMPONENT
-***************************************/
-class App extends React.Component {
-  /***************************************
-    lifecycle
-  ***************************************/
-  constructor (props) {
-    /* DEV */ console.log (`>>> App : constructing... <<<`);
-    super (props);
-    this.state = {
-      'data' : init.data,
-    };
-  };
-
-  componentDidMount () {
-    /* DEV */ console.log (`>>> App : did mount... <<<`);
-    klaxios.get (
-      init.api,
-      (newData) => { this.setState ({ data : newData }); }
-    )
-  };
-
-  componentDidUpdate () {
-    /* DEV */ console.log (`>>> App : did update... <<<`);
-  };
-
-  componentWillUnmount () {
-    /* DEV */ console.log (`>>> App : will unmount... <<<`);
-  };
-
-  render () {
-    /* DEV */ console.log (`>>> App : rendering... <<<`);
-    return (
-      <div className='App'>
-        <PlayerCardsDeck players={this.state.data}/>
-      </div>
-    );
-  };
-
-  /***************************************
-    ...rest
-  ***************************************/
-
-
-  /**************************************/
-};
+const App = (props) => (
+  <div className='App'>
+    <header>
+      <h1>sprint-challenge--advanced-react</h1>
+    </header>
+    <main>
+      <Router>
+        <Route path='/as-class'>
+          <AppAsClass api={init.api}/>
+        </Route>
+        <Route path='/as-fun'>
+          <AppAsFun api={init.api}/>
+        </Route>
+      </Router>
+    </main>
+  </div>
+);
 
 /**************************************/
 export default App;
