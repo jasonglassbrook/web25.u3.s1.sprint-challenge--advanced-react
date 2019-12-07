@@ -14,7 +14,4 @@ const FlexRow = styled.div `
 
 /**************************************/
 export default FlexRow;
-
-export {
-  FlexRow,
-};
+export { FlexRow };

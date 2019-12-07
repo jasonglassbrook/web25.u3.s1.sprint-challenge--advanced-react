@@ -14,7 +14,4 @@ const FlexCol = styled.div `
 
 /**************************************/
 export default FlexCol;
-
-export {
-  FlexCol,
-};
+export { FlexCol };
