@@ -3,7 +3,7 @@ import React from 'react';
 
 /// components ///
 import CardsDeck from 'components/basics/cards/CardsDeck';
-import PlayerCard from 'components/PlayerCard';
+import PlayerCard from './PlayerCard';
 
 /***************************************
   COMPONENT
