@@ -5,6 +5,9 @@ import React from 'react';
 import CardsDeck from 'components/basics/cards/CardsDeck';
 import PlayerCard from './PlayerCard';
 
+/// styles ///
+import './PlayerCardsDeck.css';
+
 /***************************************
   COMPONENT
 ***************************************/

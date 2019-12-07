@@ -6,6 +6,9 @@ import Card from 'components/basics/cards/Card';
 import CardHead from 'components/basics/cards/CardHead';
 import CardBody from 'components/basics/cards/CardBody';
 
+/// styles ///
+import './PlayerCard.css';
+
 /***************************************
   COMPONENT
 ***************************************/

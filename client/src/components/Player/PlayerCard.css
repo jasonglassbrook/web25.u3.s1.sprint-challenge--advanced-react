@@ -1,0 +1,4 @@
+PlayerCard {
+  margin: var(--size-04-px);
+  flex: 1 0 auto;
+}
