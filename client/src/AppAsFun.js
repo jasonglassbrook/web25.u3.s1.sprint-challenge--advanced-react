@@ -2,16 +2,23 @@
 import React from 'react';
 
 /// hooks ///
-import useRemoteGet from 'hooks/remote';
+import { useRemoteGet } from 'hooks/remote';
 
 /// components ///
 import PlayerCardsDeck from 'components/Player/PlayerCardsDeck';
 
 /***************************************
+  INIT
+***************************************/
+const init = {
+  data : [],
+};
+
+/***************************************
   COMPONENT
 ***************************************/
 const AppAsFun = (props) => {
-  const [ data, getData ] = useRemoteGet (props.api);
+  const [ data, getData ] = useRemoteGet (props.api, { fallbackData : init.data });
 
   React.useEffect (() => {
     getData ();
