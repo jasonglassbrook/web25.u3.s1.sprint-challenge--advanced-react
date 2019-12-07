@@ -37,14 +37,35 @@
 	"scope"  : "javascript,javascriptreact",
 	"prefix" : "import--component",
 	"body"   : [
-		"import ${3:${1}} from '${2:./components}/${1:Component}';${0}",
+		"import ${2:${1}} from 'components/${1:Component}';${0}",
+	],
+},
+"import : hook" : {
+	"scope"  : "javascript,javascriptreact",
+	"prefix" : "import--hook",
+	"body"   : [
+		"import ${2:${1}} from 'hooks/${1:module}';${0}",
 	],
 },
 "import : data" : {
 	"scope"  : "javascript,javascriptreact",
 	"prefix" : "import--data",
 	"body"   : [
-		"import ${3:${1}} from '${2:./data}/${1:module}';${0}",
+		"import ${2:${1}} from 'data/${1:module}';${0}",
+	],
+},
+"import : test" : {
+	"scope"  : "javascript,javascriptreact",
+	"prefix" : "import--tester",
+	"body"   : [
+		"import ${2:${1}} from 'testers/${1:module}';${0}",
+	],
+},
+"import : tool" : {
+	"scope"  : "javascript,javascriptreact",
+	"prefix" : "import--tool",
+	"body"   : [
+		"import ${2:${1}} from 'tools/${1:module}';${0}",
 	],
 },
 ///%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -68,12 +89,57 @@
 		"${0}",
 	],
 },
+"imports : ${category}" : {
+	"scope"  : "javascript,javascriptreact",
+	"prefix" : "imports--category",
+	"body"   : [
+		"/// ${1:category} ///",
+		"import ${4:${2}} from '${3:${1}}/${2:module}';",
+		"${0}",
+	],
+},
+"imports : components" : {
+	"scope"  : "javascript,javascriptreact",
+	"prefix" : "imports--components",
+	"body"   : [
+		"/// components ///",
+		"import ${2:${1}} from 'components/${1:module}';",
+		"${0}",
+	],
+},
 "imports : data" : {
 	"scope"  : "javascript,javascriptreact",
 	"prefix" : "imports--data",
 	"body"   : [
 		"/// data ///",
-		"import ${3:${1}} from '${2:./data}/${1:module}';",
+		"import ${2:${1}} from 'data/${1:module}';",
+		"${0}",
+	],
+},
+"imports : hooks" : {
+	"scope"  : "javascript,javascriptreact",
+	"prefix" : "imports--hooks",
+	"body"   : [
+		"/// hooks ///",
+		"import ${2:${1}} from 'hooks/${1:module}';",
+		"${0}",
+	],
+},
+"imports : testers" : {
+	"scope"  : "javascript,javascriptreact",
+	"prefix" : "imports--testers",
+	"body"   : [
+		"/// testers ///",
+		"import ${2:${1}} from 'testers/${1:module}';",
+		"${0}",
+	],
+},
+"imports : tools" : {
+	"scope"  : "javascript,javascriptreact",
+	"prefix" : "imports--tools",
+	"body"   : [
+		"/// tools ///",
+		"import ${2:${1}} from 'tools/${1:module}';",
 		"${0}",
 	],
 },
