@@ -29,7 +29,9 @@ const AppAsFun = (props) => {
 
   // trigger GET
   React.useEffect (() => {
-    getData ();
+    if (data.length === 0) {
+      getData ();
+    };
   }, [data]);
 
   //
