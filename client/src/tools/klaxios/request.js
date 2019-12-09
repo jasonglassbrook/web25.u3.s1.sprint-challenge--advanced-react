@@ -25,10 +25,10 @@ export const request = (name, url, options) => {
   axios
     [name] (...(is (options.config) ? [url, options.config] : [url]))
     .then ((response) => {
-      options.handleResponse (response, setData, options.initData);
+      options.handleResponse (response, options.handleData, options.initData);
     })
     .catch ((error) => {
-      options.handleError (error, setData, options.initData);
+      options.handleError (error, options.handleData, options.initData);
     });
 };
 
