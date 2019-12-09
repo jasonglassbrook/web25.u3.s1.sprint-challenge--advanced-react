@@ -7,14 +7,15 @@
 /*//////////////////////////////////////
   imports
 //////////////////////////////////////*/
-import remote from './remote';
+import http from './http';
 
 /*//////////////////////////////////////
   exports
 //////////////////////////////////////*/
+/// qualified names ///
 export default {
-  remote,
+  http,
 };
 
-// export * from './remote';
-export {default as remote} from './remote';
+/// full names ///
+export { default as http } from './http';

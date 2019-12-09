@@ -1,5 +1,5 @@
 /*******************************************************************************
-  hooks/remote
+  hooks/http
 --------------------------------------------------------------------------------
   React hooks for HTTP requests.
 *******************************************************************************/
@@ -7,13 +7,15 @@
 /*//////////////////////////////////////
   imports
 //////////////////////////////////////*/
-import useGet from './useRemoteGet';
+import useGet from './useHttpGet';
 
 /*//////////////////////////////////////
   exports
 //////////////////////////////////////*/
+/// qualified names ///
 export default {
   useGet,
 };
 
-export * from './useRemoteGet';
+/// full names ///
+export { default as useHttpGet } from './useHttpGet';

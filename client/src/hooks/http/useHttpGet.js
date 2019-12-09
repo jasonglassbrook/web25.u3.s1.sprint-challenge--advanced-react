@@ -1,5 +1,5 @@
 /*******************************************************************************
-  useRemoteGet
+  useHttpGet
 *******************************************************************************/
 
 /*//////////////////////////////////////
@@ -19,7 +19,7 @@ import klaxios from 'tools/klaxios';
 /*//////////////////////////////////////
   meta
 //////////////////////////////////////*/
-// const $this = $tree.branch ('useRemoteGet', $pack);
+// const $this = $tree.branch ('useHttpGet', $pack);
 // const flag = (method, message) => {
 //   _flag (method, `${$this.$fullname} : ${message}`);
 // };
@@ -27,7 +27,7 @@ import klaxios from 'tools/klaxios';
 /***************************************
   MAIN
 ***************************************/
-export const useRemoteGet = (address, options) => {
+export const useHttpGet = (address, options) => {
   const [data, setData] = React.useState (options.fallbackData);
 
   const getData = () => {
@@ -40,4 +40,4 @@ export const useRemoteGet = (address, options) => {
 /*//////////////////////////////////////
   exports
 //////////////////////////////////////*/
-export default useRemoteGet;
+export default useHttpGet;
