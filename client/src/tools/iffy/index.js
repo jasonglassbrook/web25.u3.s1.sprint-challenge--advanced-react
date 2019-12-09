@@ -21,6 +21,7 @@ export const boolean = (x) => (yes (x) || no (x));
 /*//////////////////////////////////////
   exports
 //////////////////////////////////////*/
+/// qualified names ///
 export default ({
   is, isnt, maybe,
   yes, no, boolean,

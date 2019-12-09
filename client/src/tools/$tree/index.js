@@ -20,4 +20,5 @@ export const root = ($name) => (branch ($name));
 /*//////////////////////////////////////
   exports
 //////////////////////////////////////*/
+/// qualified names ///
 export default ({ branch, root });

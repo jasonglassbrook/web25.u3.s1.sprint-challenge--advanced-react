@@ -18,6 +18,7 @@ import parseError     from './parseAxiosError';
 /*//////////////////////////////////////
   exports
 //////////////////////////////////////*/
+/// qualified names ///
 export default {
   get,
   handleResponse,
@@ -26,8 +27,9 @@ export default {
   parseError,
 };
 
-export * from './get';
-export * from './handleAxiosResponse';
-export * from './handleAxiosError';
-export * from './parseAxiosResponse';
-export * from './parseAxiosError';
+/// full names ///
+export { default as get } from './get';
+export { default as handleAxiosResponse } from './handleAxiosResponse';
+export { default as handleAxiosError    } from './handleAxiosError';
+export { default as parseAxiosResponse  } from './parseAxiosResponse';
+export { default as parseAxiosError     } from './parseAxiosError';

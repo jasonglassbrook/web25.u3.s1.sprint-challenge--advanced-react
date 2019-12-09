@@ -11,4 +11,5 @@ export const flag = (method, message) => {
 /*//////////////////////////////////////
   exports
 //////////////////////////////////////*/
+/// qualified names ///
 export default ({ flag });

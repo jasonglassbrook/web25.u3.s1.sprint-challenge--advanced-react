@@ -15,6 +15,7 @@ import klaxios from './klaxios';
 /*//////////////////////////////////////
   exports
 //////////////////////////////////////*/
+/// qualified names ///
 export default {
   $tree,
   hi,
@@ -22,11 +23,7 @@ export default {
   klaxios,
 };
 
-// export * from './$tree';
 export {default as $tree} from './$tree';
-// export * from './hi';
-export {default as hi} from './hi';
-// export * from './iffy';
-export {default as iffy} from './iffy';
-// export * from './klaxios';
-export {default as klaxios} from './klaxios';
+export { default as hi } from './hi';
+export { default as iffy } from './iffy';
+export { default as klaxios } from './klaxios';
