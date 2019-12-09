@@ -15,19 +15,17 @@ import handleAxiosError from './handleAxiosError';
   initOptions
 --------------------------------------*/
 export const initOptions = {
-  'options' : {
-    'config' : undefined,
-    'handleResponse' : (...args) => {
-      handleAxiosResponse (...args);
-    },
-    'handleError' : (...args) => {
-      handleAxiosError (...args);
-    },
-    'handleData' : (...args) => {
-      console.log (...args);
-    },
-    'initData' : {},
+  config : undefined,
+  handleResponse : (...args) => {
+    handleAxiosResponse (...args);
   },
+  handleError : (...args) => {
+    handleAxiosError (...args);
+  },
+  handleData : (...args) => {
+    console.log (...args);
+  },
+  initData : {},
 };
 
 /*--------------------------------------
