@@ -11,7 +11,7 @@ import React from 'react';
 import http from 'hooks/http';
 
 /// components ///
-import PlayerCardsDeck from 'components/Player/PlayerCardsDeck';
+import Player from 'components/Player';
 
 /***************************************
   INIT
@@ -39,7 +39,7 @@ const AppAsFun = (props) => {
         <h2>AppAsFun</h2>
       </header>
       <main>
-        <PlayerCardsDeck players={data}/>
+        <Player.CardsDeck players={data}/>
       </main>
     </div>
   );

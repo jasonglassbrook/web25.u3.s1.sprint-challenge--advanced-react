@@ -11,7 +11,7 @@ import React from 'react';
 import klaxios from 'tools/klaxios';
 
 /// components ///
-import PlayerCardsDeck from 'components/Player/PlayerCardsDeck';
+import Player from 'components/Player';
 
 /***************************************
   INIT
@@ -66,7 +66,7 @@ class AppAsClass extends React.Component {
           <h2>AppAsClass</h2>
         </header>
         <main>
-          <PlayerCardsDeck players={this.state.data}/>
+          <Player.CardsDeck players={this.state.data}/>
         </main>
       </div>
     );
