@@ -7,7 +7,7 @@
 *******************************************************************************/
 
 /*//////////////////////////////////////
-  imports
+  exports : qualified short-names
 //////////////////////////////////////*/
 import get from './get';
 import handleResponse from './handleAxiosResponse';
@@ -15,10 +15,6 @@ import handleError    from './handleAxiosError';
 import parseResponse  from './parseAxiosResponse';
 import parseError     from './parseAxiosError';
 
-/*//////////////////////////////////////
-  exports
-//////////////////////////////////////*/
-/// qualified names ///
 export default {
   get,
   handleResponse,
@@ -27,7 +23,9 @@ export default {
   parseError,
 };
 
-/// full names ///
+/*//////////////////////////////////////
+  exports : unqualified full-names
+//////////////////////////////////////*/
 export { default as get } from './get';
 export { default as handleAxiosResponse } from './handleAxiosResponse';
 export { default as handleAxiosError    } from './handleAxiosError';

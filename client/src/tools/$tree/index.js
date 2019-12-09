@@ -2,9 +2,7 @@
   $tree
 *******************************************************************************/
 
-/*--------------------------------------
-  branch
---------------------------------------*/
+/// branch ///
 export const branch = ($name, $pack) => {
   const $pathname = ($pack) ? ($pack.$fullname + '/') : ('');
   const $fullname = $pathname + $name;
@@ -12,13 +10,9 @@ export const branch = ($name, $pack) => {
   return ({ $name, $pathname, $fullname });
 };
 
-/*--------------------------------------
-  root
---------------------------------------*/
+/// root ///
 export const root = ($name) => (branch ($name));
 
-/*//////////////////////////////////////
-  exports
-//////////////////////////////////////*/
-/// qualified names ///
+/**************************************/
+
 export default ({ branch, root });

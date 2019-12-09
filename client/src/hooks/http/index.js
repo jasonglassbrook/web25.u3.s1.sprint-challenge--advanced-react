@@ -5,17 +5,15 @@
 *******************************************************************************/
 
 /*//////////////////////////////////////
-  imports
+  exports : qualified short-names
 //////////////////////////////////////*/
 import useGet from './useHttpGet';
 
-/*//////////////////////////////////////
-  exports
-//////////////////////////////////////*/
-/// qualified names ///
 export default {
   useGet,
 };
 
-/// full names ///
+/*//////////////////////////////////////
+  exports : unqualified full-names
+//////////////////////////////////////*/
 export { default as useHttpGet } from './useHttpGet';

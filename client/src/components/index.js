@@ -5,20 +5,18 @@
 *******************************************************************************/
 
 /*//////////////////////////////////////
-  imports
+  exports : qualified short-names
 //////////////////////////////////////*/
 import basics from './basics';
 import Player from './Player';
 
-/*//////////////////////////////////////
-  exports
-//////////////////////////////////////*/
-/// qualified names ///
 export default {
   basics,
   Player,
 };
 
-/// full names ///
+/*//////////////////////////////////////
+  exports : unqualified full-names
+//////////////////////////////////////*/
 export { default as basics } from './basics';
 export { default as Player } from './Player';

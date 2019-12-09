@@ -5,17 +5,13 @@
 *******************************************************************************/
 
 /*//////////////////////////////////////
-  imports
+  exports : qualified short-names
 //////////////////////////////////////*/
 import $tree from './$tree';
 import hi from './hi';
 import iffy from './iffy';
 import klaxios from './klaxios';
 
-/*//////////////////////////////////////
-  exports
-//////////////////////////////////////*/
-/// qualified names ///
 export default {
   $tree,
   hi,

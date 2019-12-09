@@ -5,23 +5,21 @@
 *******************************************************************************/
 
 /*//////////////////////////////////////
-  imports
+  exports : qualified short-names
 //////////////////////////////////////*/
 import Flex from './Flex';
 import FlexCol from './FlexCol';
 import FlexRow from './FlexRow';
 
-/*//////////////////////////////////////
-  exports
-//////////////////////////////////////*/
-/// qualified names ///
 export default {
   Flex,
   FlexCol,
   FlexRow,
 };
 
-/// full names ///
+/*//////////////////////////////////////
+  exports : unqualified full-names
+//////////////////////////////////////*/
 export { default as Flex } from './Flex';
 export { default as FlexCol } from './FlexCol';
 export { default as FlexRow } from './FlexRow';

@@ -5,20 +5,18 @@
 *******************************************************************************/
 
 /*//////////////////////////////////////
-  imports
+  exports : qualified short-names
 //////////////////////////////////////*/
 import cards from './cards';
 import flex from './flex';
 
-/*//////////////////////////////////////
-  exports
-//////////////////////////////////////*/
-/// qualified names ///
 export default {
   cards,
   flex,
 };
 
-/// full names ///
+/*//////////////////////////////////////
+  exports : unqualified full-names
+//////////////////////////////////////*/
 export { default as cards } from './cards';
 export { default as flex } from './flex';
