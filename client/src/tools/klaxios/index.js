@@ -9,6 +9,7 @@
 /*//////////////////////////////////////
   exports : qualified short-names
 //////////////////////////////////////*/
+import request from './request';
 import get from './get';
 import handleResponse from './handleAxiosResponse';
 import handleError    from './handleAxiosError';
@@ -16,6 +17,7 @@ import parseResponse  from './parseAxiosResponse';
 import parseError     from './parseAxiosError';
 
 export default {
+  request,
   get,
   handleResponse,
   handleError,
@@ -26,6 +28,7 @@ export default {
 /*//////////////////////////////////////
   exports : unqualified full-names
 //////////////////////////////////////*/
+export { default as request } from './request';
 export { default as get } from './get';
 export { default as handleAxiosResponse } from './handleAxiosResponse';
 export { default as handleAxiosError    } from './handleAxiosError';
