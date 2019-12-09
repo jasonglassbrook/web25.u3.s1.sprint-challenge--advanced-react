@@ -22,7 +22,7 @@ export const useHttpGet = (url, options) => {
 
   // use state
   const [data, setData] = React.useState (
-    is (options.fallbackData) ? options.fallbackData : {}
+    is (options.initData) ? options.initData : {}
   );
   
   // append setData to options.handleData
