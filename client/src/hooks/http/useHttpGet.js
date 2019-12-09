@@ -31,6 +31,9 @@ export const useHttpGet = (url, options) => {
       options.handleData (...args);
       setData (...args);
     };
+  }
+  else {
+    options.handleData = setData;
   };
 
   // define getter
