@@ -1,5 +1,12 @@
 /*******************************************************************************
   handleAxiosResponse
+--------------------------------------------------------------------------------
+  A default method to handle `axios`'s data responses.
+
+  params :
+    response
+    handleData
+    fallbackData
 *******************************************************************************/
 
 /// tools ///
@@ -22,7 +29,7 @@ const flag = (method, message) => {
 /***************************************
   MAIN
 ***************************************/
-export const handleAxiosResponse = (response, setData, fallbackData) => {
+export const handleAxiosResponse = (response, handleData, fallbackData) => {
   let data = fallbackData;
 
   try {
@@ -33,8 +40,8 @@ export const handleAxiosResponse = (response, setData, fallbackData) => {
     console.error (error);
   }
 
-  if (is (setData)) {
-    setData (data);
+  if (is (handleData)) {
+    handleData (data);
   }
 };
 
