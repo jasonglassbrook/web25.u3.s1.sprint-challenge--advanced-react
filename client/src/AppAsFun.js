@@ -2,7 +2,7 @@
 import React from 'react';
 
 /// hooks ///
-import { useRemoteGet } from 'hooks/remote';
+import http from 'hooks/http';
 
 /// components ///
 import PlayerCardsDeck from 'components/Player/PlayerCardsDeck';
@@ -18,7 +18,7 @@ const init = {
   COMPONENT
 ***************************************/
 const AppAsFun = (props) => {
-  const [ data, getData ] = useRemoteGet (props.api, { fallbackData : init.data });
+  const [ data, getData ] = http.useGet (props.api, { initData : init.data });
 
   React.useEffect (() => {
     getData ();

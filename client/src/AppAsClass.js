@@ -33,7 +33,10 @@ class AppAsClass extends React.Component {
     /* DEV */ console.log (`>>> AppAsClass : did mount... <<<`);
     klaxios.get (
       this.props.api,
-      (newData) => { this.setState ({ data : newData }); }
+      {
+        handleData : (newData) => { this.setState ({ data : newData }); },
+        initData : init.data,
+      }
     );
   };
 
