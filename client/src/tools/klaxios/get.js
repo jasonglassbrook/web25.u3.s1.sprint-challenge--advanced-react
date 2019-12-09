@@ -11,14 +11,14 @@ import axios from 'axios';
 import { is } from 'tools/iffy';
 
 /// internal modules ///
-// import $pack from './$';
+// import $trunk from './$';
 import handleAxiosResponse from './handleAxiosResponse';
 import handleAxiosError from './handleAxiosError';
 
 /*//////////////////////////////////////
   meta
 //////////////////////////////////////*/
-// const $this = $tree.branch ('get', $pack);
+// const $this = $tree.branch ('get', $trunk);
 // const flag = (method, message) => {
 //   _flag (method, `${$this.$fullname} : ${message}`);
 // };

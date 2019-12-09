@@ -11,12 +11,12 @@ import React from 'react';
 import klaxios from 'tools/klaxios';
 
 /// internal modules ///
-// import $pack from './$';
+// import $trunk from './$';
 
 /*//////////////////////////////////////
   meta
 //////////////////////////////////////*/
-// const $this = $tree.branch ('useHttpGet', $pack);
+// const $this = $tree.branch ('useHttpGet', $trunk);
 // const flag = (method, message) => {
 //   _flag (method, `${$this.$fullname} : ${message}`);
 // };

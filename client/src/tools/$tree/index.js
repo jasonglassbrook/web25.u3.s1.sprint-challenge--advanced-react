@@ -5,8 +5,8 @@
 *******************************************************************************/
 
 /// branch ///
-export const branch = ($name, $pack) => {
-  const $pathname = ($pack) ? ($pack.$fullname + '/') : ('');
+export const branch = ($name, $trunk) => {
+  const $pathname = ($trunk) ? ($trunk.$fullname + '/') : ('');
   const $fullname = $pathname + $name;
 
   return ({ $name, $pathname, $fullname });

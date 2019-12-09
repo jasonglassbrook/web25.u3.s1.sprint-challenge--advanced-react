@@ -10,12 +10,12 @@ import { flag as _flag } from 'tools/hi';
 import { is } from 'tools/iffy';
 
 /// internal modules ///
-import $pack from './$';
+import $trunk from './$';
 
 /*//////////////////////////////////////
   meta
 //////////////////////////////////////*/
-const $this = $tree.branch ('parseAxiosResponse', $pack);
+const $this = $tree.branch ('parseAxiosResponse', $trunk);
 const flag = (method, message) => {
   _flag (method, `${$this.$fullname} : ${message}`);
 };
