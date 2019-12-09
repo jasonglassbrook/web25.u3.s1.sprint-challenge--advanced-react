@@ -1,3 +1,9 @@
+/*******************************************************************************
+  AppAsClass
+--------------------------------------------------------------------------------
+  Implementation of App as a class component to demonstrate ability to write class components.
+*******************************************************************************/
+
 /// external modules ///
 import React from 'react';
 
@@ -24,6 +30,7 @@ class AppAsClass extends React.Component {
   constructor (props) {
     /* DEV */ console.log (`>>> AppAsClass : constructing... <<<`);
     super (props);
+    
     this.state = {
       'data' : init.data,
     };
@@ -31,6 +38,8 @@ class AppAsClass extends React.Component {
 
   componentDidMount () {
     /* DEV */ console.log (`>>> AppAsClass : did mount... <<<`);
+
+    // use my `klaxios` module for HTTP GET request 
     klaxios.get (
       this.props.api,
       {
@@ -50,6 +59,7 @@ class AppAsClass extends React.Component {
 
   render () {
     /* DEV */ console.log (`>>> AppAsClass : rendering... <<<`);
+
     return (
       <div className='AppAsClass'>
         <header>

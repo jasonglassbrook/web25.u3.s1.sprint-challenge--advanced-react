@@ -1,3 +1,9 @@
+/*******************************************************************************
+  AppAsFun
+--------------------------------------------------------------------------------
+  Implementation of App as a function component to demonstrate use of a custom hook, which CANNOT be used in a class component.
+*******************************************************************************/
+
 /// external modules ///
 import React from 'react';
 
@@ -18,12 +24,15 @@ const init = {
   COMPONENT
 ***************************************/
 const AppAsFun = (props) => {
+  // use my custom hook for HTTP GET requests
   const [ data, getData ] = http.useGet (props.api, { initData : init.data });
 
+  // trigger GET
   React.useEffect (() => {
     getData ();
   }, [data]);
 
+  //
   return (
     <div className='AppAsFun'>
       <header>
