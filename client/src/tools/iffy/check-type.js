@@ -1,5 +1,5 @@
 /*******************************************************************************
-  IS TYPE
+  iffy/check-type
 --------------------------------------------------------------------------------
   Functions to robustly check types.
 --------------------------------------------------------------------------------
@@ -9,17 +9,17 @@
 
 /*--------------------------------------
   isOf
-  Check if input is of type _type_.
+  Check if input is of type _name_.
 --------------------------------------*/
 export const isOf = (name, maybe) => (
   maybe && (toString.call(maybe) === '[object ' + name + ']')
 );
 
 /*--------------------------------------
-  check.is<_type_>
-  Check if input is of type _type_.
+  is.<_name_>
+  Check if input is of type _name_.
 --------------------------------------*/
-export const check = (
+export const is = Object.fromEntries (
   [
     'Arguments' ,
     'Function'  ,
@@ -28,13 +28,15 @@ export const check = (
     'Date'      ,
     'RegExp'    ,
   ]
-  .reduce ((obj, name) => {
-    obj['is' + name] = (maybe) => (isOf (name, maybe));
-    return (obj);
-  }, {})
+  .map ((name) => ([
+    name,
+    (maybe) => (isOf (name, maybe)),
+  ]))
 );
 
-/*--------------------------------------
-  default
---------------------------------------*/
-export default ({ ...check, isOf })
+/**************************************/
+
+export default {
+  isOf,
+  is,
+};
