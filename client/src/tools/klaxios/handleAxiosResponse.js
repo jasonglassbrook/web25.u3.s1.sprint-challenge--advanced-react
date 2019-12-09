@@ -2,9 +2,6 @@
   handleAxiosResponse
 *******************************************************************************/
 
-/*//////////////////////////////////////
-  imports
-//////////////////////////////////////*/
 /// tools ///
 import $tree from 'tools/$tree';
 import { flag as _flag } from 'tools/hi';
@@ -41,7 +38,6 @@ export const handleAxiosResponse = (response, setData, fallbackData) => {
   }
 };
 
-/*//////////////////////////////////////
-  exports
-//////////////////////////////////////*/
+/**************************************/
+
 export default handleAxiosResponse;

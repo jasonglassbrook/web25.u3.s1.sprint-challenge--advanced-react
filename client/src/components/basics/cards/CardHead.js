@@ -18,4 +18,5 @@ const CardHead = ({ children, ...rest }) => {
 };
 
 /**************************************/
+
 export default CardHead;

@@ -4,9 +4,6 @@
   Exhaustively deals with axios's errors.
 *******************************************************************************/
 
-/*//////////////////////////////////////
-  imports
-//////////////////////////////////////*/
 /// tools ///
 import $tree from 'tools/$tree';
 import { flag as _flag } from 'tools/hi';
@@ -70,7 +67,6 @@ export const parseAxiosError = (axiosError) => {
   return (message);
 }
 
-/*//////////////////////////////////////
-  exports
-//////////////////////////////////////*/
+/**************************************/
+
 export default parseAxiosError;

@@ -13,5 +13,6 @@ const FlexCol = (X = 'div') => styled (X) `
 `;
 
 /**************************************/
+
 export default FlexCol;
 export { FlexCol };

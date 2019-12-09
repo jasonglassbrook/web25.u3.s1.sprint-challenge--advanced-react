@@ -13,5 +13,6 @@ const FlexRow = (X = 'div') => styled (X) `
 `;
 
 /**************************************/
+
 export default FlexRow;
 export { FlexRow };

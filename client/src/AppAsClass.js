@@ -68,4 +68,5 @@ class AppAsClass extends React.Component {
 };
 
 /**************************************/
+
 export default AppAsClass;

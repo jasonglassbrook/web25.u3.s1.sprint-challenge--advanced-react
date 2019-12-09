@@ -18,4 +18,5 @@ const CardFoot = ({ children, ...rest }) => {
 };
 
 /**************************************/
+
 export default CardFoot;

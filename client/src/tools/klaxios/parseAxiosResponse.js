@@ -4,9 +4,6 @@
   Deal with axios response data.
 *******************************************************************************/
 
-/*//////////////////////////////////////
-  imports
-//////////////////////////////////////*/
 /// tools ///
 import $tree from 'tools/$tree';
 import { flag as _flag } from 'tools/hi';
@@ -46,7 +43,6 @@ export const parseAxiosResponse = (axiosResponse) => {
   return (message);
 };
 
-/*//////////////////////////////////////
-  exports
-//////////////////////////////////////*/
+/**************************************/
+
 export default parseAxiosResponse;

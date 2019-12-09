@@ -30,4 +30,5 @@ const Card = ({ row, col, children, ...rest }) => {
 };
 
 /**************************************/
+
 export default Card;

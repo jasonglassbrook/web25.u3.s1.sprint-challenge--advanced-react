@@ -17,4 +17,5 @@ export const renders = (name, Component, props) => {
 };
 
 /**************************************/
+
 export default renders;

@@ -117,5 +117,6 @@ const Flex = (X = 'div') => styled (X) `
 `
 
 /**************************************/
+
 export default Flex;
 export { Flex };

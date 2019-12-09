@@ -2,9 +2,6 @@
   handleAxiosError
 *******************************************************************************/
 
-/*//////////////////////////////////////
-  imports
-//////////////////////////////////////*/
 /// tools ///
 import $tree from 'tools/$tree';
 import { flag as _flag } from 'tools/hi';
@@ -43,7 +40,6 @@ export const handleAxiosError = (error, setData, fallbackData) => {
   }
 };
 
-/*//////////////////////////////////////
-  exports
-//////////////////////////////////////*/
+/**************************************/
+
 export default handleAxiosError;
