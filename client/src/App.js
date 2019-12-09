@@ -21,15 +21,20 @@ const init = {
   api : 'http://localhost:5000/api/players',
 };
 
+/***************************************
+  COMPONENTS
+***************************************/
+const Nav = FlexRow ('nav');
+
 const App = (props) => (
   <Router>
     <div className='App'>
       <header>
         <h1>sprint-challenge--advanced-react</h1>
-        <nav>
+        <Nav>
           <NavLink to='/as-class'>View As Class Component</NavLink>
           <NavLink to='/as-fun'>View As Function Component</NavLink>
-        </nav>
+        </Nav>
       </header>
       <main>
           <Route path='/as-class'>
