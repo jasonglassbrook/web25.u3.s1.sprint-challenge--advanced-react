@@ -15,4 +15,7 @@ export const root = ($name) => (branch ($name));
 
 /**************************************/
 
-export default ({ branch, root });
+export default {
+  branch,
+  root,
+};

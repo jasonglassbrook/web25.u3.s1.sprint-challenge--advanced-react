@@ -20,7 +20,7 @@ export const boolean = (x) => (yes (x) || no (x));
 
 /**************************************/
 
-export default ({
+export default {
   is, isnt, maybe,
   yes, no, boolean,
-});
+};

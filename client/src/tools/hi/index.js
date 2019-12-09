@@ -11,4 +11,6 @@ export const flag = (method, message) => {
 
 /**************************************/
 
-export default ({ flag });
+export default {
+  flag,
+};
