@@ -1,0 +1,37 @@
+/// external modules ///
+import React from 'react';
+import styled from 'styled-components';
+
+/// internal modules ///
+import Flex from 'components/basics/flex/Flex';
+
+/// styles ///
+import './styles.css';
+
+/***************************************
+  COMPONENT
+***************************************/
+const Container = Flex (styled.ol ``);
+
+const CardsDeck = ({ row, col, wrap, flex, keys, children, ...rest }) => {
+  return (
+    <Container
+    className={`cards-deck ${rest.className || ''}`.trim ()}
+    flex={{
+      row : row, col : col,
+      wrap : wrap,
+      lines : 'stretch',
+      items : { across : 'stretch', along : 'start' },
+      ...flex
+    }}
+    >
+      {React.Children.map (children, (item, i) => (
+        <li key={keys[i]}>{item}</li>
+      ))}
+    </Container>
+  );
+};
+
+/**************************************/
+
+export default CardsDeck;

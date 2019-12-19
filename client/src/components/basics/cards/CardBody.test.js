@@ -1,5 +1,5 @@
 /// components ///
-import App from './App';
+import CardBody from './CardBody';
 
 /// testers ///
 import renders from 'testers/renders';
@@ -8,8 +8,8 @@ import renders from 'testers/renders';
   TESTING
 ***************************************/
 const what = {
-  name : 'App',
-  Component : App,
+  name : 'CardBody',
+  Component : CardBody,
 };
 
 renders (what.name, what.Component);
